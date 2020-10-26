@@ -6,9 +6,12 @@ import ImageHoster.model.User;
 import ImageHoster.model.UserProfile;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.TagService;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -78,6 +81,7 @@ public class ImageControllerTest {
 
         session = new MockHttpSession();
         session.setAttribute("loggeduser", user);
+//        session.setAttribute("test",true);
 
         Image image = new Image();
         image.setId(1);
@@ -85,9 +89,8 @@ public class ImageControllerTest {
         image.setDescription("This image is for testing purpose");
         image.setUser(user);
 
-
         Mockito.when(imageService.getImage(Mockito.anyInt())).thenReturn(image);
-        imageService.uploadImage(image);
+
         this.mockMvc.perform(get("/images/1/new").session(session))
                 .andExpect(view().name("images/image"))
                 .andExpect(content().string(containsString("Welcome User. This is the image")));

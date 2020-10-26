@@ -1,8 +1,10 @@
 package ImageHoster.controller;
 
+import ImageHoster.model.Comment;
 import ImageHoster.model.Image;
 import ImageHoster.model.Tag;
 import ImageHoster.model.User;
+import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,9 +51,12 @@ public class ImageController {
     //this list is then sent to 'images/image.html' file and the tags are displayed
     @RequestMapping("/images/{imageId}/{title}")
     public String showImage(@PathVariable("imageId") Integer imageId, @PathVariable("title") String title, Model model) {
+//        if((Boolean) session.getAttribute("test")) return "images/image";
+
         Image image = imageService.getImageByIdAndTitle(imageId,title);
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
+        model.addAttribute("comments",image.getComments());
         return "images/image";
     }
 
@@ -150,22 +155,7 @@ public class ImageController {
     //The method calls the deleteImage() method in the business logic passing the id of the image to be deleted
     //Looks for a controller method with request mapping of type '/images'
     @RequestMapping(value = "/deleteImage", method = {RequestMethod.DELETE,RequestMethod.POST})
-    public String deleteImageSubmit(
-            @RequestParam(name = "imageId") Integer imageId,
-            HttpSession session, //, RedirectAttributes redirectAttributes,
-            Model model
-    ) {
-//        Image image = imageService.getImage(imageId);
-//        User user = (User) session.getAttribute("loggeduser");
-//        if(image.getUser().getId() != user.getId()) {
-//            String error = "Only the owner of the image can edit the image";
-//            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-//            redirectAttributes.addFlashAttribute("deleteError", error);
-//            return "redirect:images/"+imageId+"/"+image.getTitle();
-//        }
-//
-//        imageService.deleteImage(imageId);
-//        return "redirect:/images";
+    public String deleteImageSubmit( @RequestParam(name = "imageId") Integer imageId, HttpSession session, Model model ) {
 
         Image image = imageService.getImage(imageId);
         User user = (User) session.getAttribute("loggeduser");
@@ -180,7 +170,6 @@ public class ImageController {
 
         model.addAttribute("image", image);
         return (error != null) ? "images/image" : "redirect:/images" ;
-//        return (error != null) ? "":"redirect:/images";
     }
 
 

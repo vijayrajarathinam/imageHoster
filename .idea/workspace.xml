@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ImageHoster/controller/ImageControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ImageHoster/controller/ImageControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +87,10 @@
     <property name="project.structure.side.proportion" value="0.6643678" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ImageHoster.service" />
+      <recent name="ImageHoster.repository" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\IdeaProjects\ImageHoster" />
     </key>
@@ -84,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentControllerTest.createComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ImageHoster" />
       <extension name="coverage">
         <pattern>
@@ -93,39 +118,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ImageHoster.controller" />
-      <option name="MAIN_CLASS_NAME" value="ImageHoster.controller.ImageControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageControllerTest.deleteImageWithNonOwnerOfTheImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ImageHoster" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ImageHoster.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ImageHoster.controller" />
-      <option name="MAIN_CLASS_NAME" value="ImageHoster.controller.ImageControllerTest" />
-      <option name="METHOD_NAME" value="deleteImageWithNonOwnerOfTheImage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageControllerTest.editImageWithNonOwnerOfTheImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ImageHoster" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ImageHoster.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ImageHoster.controller" />
-      <option name="MAIN_CLASS_NAME" value="ImageHoster.controller.ImageControllerTest" />
-      <option name="METHOD_NAME" value="editImageWithNonOwnerOfTheImage" />
+      <option name="MAIN_CLASS_NAME" value="ImageHoster.controller.CommentControllerTest" />
+      <option name="METHOD_NAME" value="createComment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,13 +141,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ImageHoster.controller in ImageHoster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImageHoster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ImageHoster.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ImageHoster.controller" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImageHoster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ImageHoster.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ImageHoster.controller" />
+      <option name="MAIN_CLASS_NAME" value="ImageHoster.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ImageControllerTest.showImage" />
-        <item itemvalue="JUnit.ImageControllerTest" />
-        <item itemvalue="JUnit.ImageControllerTest.deleteImageWithNonOwnerOfTheImage" />
+        <item itemvalue="JUnit.ImageHoster.controller in ImageHoster" />
+        <item itemvalue="JUnit.CommentControllerTest.createComment" />
         <item itemvalue="Application.ImageHosterApplication" />
-        <item itemvalue="JUnit.ImageControllerTest.editImageWithNonOwnerOfTheImage" />
+        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -192,46 +215,58 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1603731160412">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603731160412" />
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602564059127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602564059127" />
-    <state x="524" y="115" key="#xdebugger.evaluate" timestamp="1603707015759">
+    <state x="554" y="75" key="#xdebugger.evaluate" timestamp="1603716873719">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="524" y="115" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1603707015759" />
-    <state width="1493" height="310" key="GridCell.Tab.0.bottom" timestamp="1603708363509">
+    <state x="554" y="75" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1603716873719" />
+    <state width="1493" height="310" key="GridCell.Tab.0.bottom" timestamp="1603735500431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603708363509" />
-    <state width="1493" height="310" key="GridCell.Tab.0.center" timestamp="1603708363509">
+    <state width="1493" height="310" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603735500431" />
+    <state width="1493" height="310" key="GridCell.Tab.0.center" timestamp="1603735500430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603708363509" />
-    <state width="1493" height="310" key="GridCell.Tab.0.left" timestamp="1603708363509">
+    <state width="1493" height="310" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603735500430" />
+    <state width="1493" height="310" key="GridCell.Tab.0.left" timestamp="1603735500430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603708363509" />
-    <state width="1493" height="310" key="GridCell.Tab.0.right" timestamp="1603708363509">
+    <state width="1493" height="310" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603735500430" />
+    <state width="1493" height="310" key="GridCell.Tab.0.right" timestamp="1603735500431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="310" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603708363509" />
-    <state width="1493" height="241" key="GridCell.Tab.1.bottom" timestamp="1603707438627">
+    <state width="1493" height="310" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603735500431" />
+    <state width="1493" height="241" key="GridCell.Tab.1.bottom" timestamp="1603717011788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603707438627" />
-    <state width="1493" height="241" key="GridCell.Tab.1.center" timestamp="1603707438626">
+    <state width="1493" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603717011788" />
+    <state width="1493" height="241" key="GridCell.Tab.1.center" timestamp="1603717011788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603707438626" />
-    <state width="1493" height="241" key="GridCell.Tab.1.left" timestamp="1603707438626">
+    <state width="1493" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603717011788" />
+    <state width="1493" height="241" key="GridCell.Tab.1.left" timestamp="1603717011788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603707438626" />
-    <state width="1493" height="241" key="GridCell.Tab.1.right" timestamp="1603707438626">
+    <state width="1493" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603717011788" />
+    <state width="1493" height="241" key="GridCell.Tab.1.right" timestamp="1603717011788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603707438626" />
+    <state width="1493" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603717011788" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1603728521564">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603728521564" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603710729743">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603710729743" />
     <state x="232" y="148" width="1071" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603029668669">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -246,178 +281,95 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>157</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>158</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>159</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>160</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>162</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>98</line>
+          <line>103</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>100</line>
+          <line>105</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>101</line>
+          <line>106</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>97</line>
+          <line>102</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>102</line>
+          <line>107</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java</url>
-          <line>233</line>
+          <line>244</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>51</line>
+          <line>55</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>52</line>
+          <line>56</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>53</line>
+          <line>57</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java</url>
-          <line>54</line>
+          <line>59</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java</url>
-          <line>90</line>
+          <line>101</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>ImageHoster</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.6643678" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
