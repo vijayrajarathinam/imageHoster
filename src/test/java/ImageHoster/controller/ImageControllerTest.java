@@ -1,4 +1,3 @@
-/*
 package ImageHoster.controller;
 
 import ImageHoster.model.Image;
@@ -86,8 +85,9 @@ public class ImageControllerTest {
         image.setDescription("This image is for testing purpose");
         image.setUser(user);
 
-        Mockito.when(imageService.getImage(Mockito.anyInt())).thenReturn(image);
 
+        Mockito.when(imageService.getImage(Mockito.anyInt())).thenReturn(image);
+        imageService.uploadImage(image);
         this.mockMvc.perform(get("/images/1/new").session(session))
                 .andExpect(view().name("images/image"))
                 .andExpect(content().string(containsString("Welcome User. This is the image")));
@@ -214,10 +214,10 @@ public class ImageControllerTest {
         userProfile.setEmailAddress("p@gmail.com");
         userProfile.setFullName("Prerna");
         userProfile.setMobileNumber("9876543210");
-        user.setProfile(userProfile1);
-        user.setId(2);
-        user.setUsername("Prerna");
-        user.setPassword("password1@@");
+        user1.setProfile(userProfile1);
+        user1.setId(2);
+        user1.setUsername("Prerna");
+        user1.setPassword("password1@@");
 
         Image image = new Image();
         image.setId(1);
@@ -289,10 +289,10 @@ public class ImageControllerTest {
         userProfile.setEmailAddress("p@gmail.com");
         userProfile.setFullName("Prerna");
         userProfile.setMobileNumber("9876543210");
-        user.setProfile(userProfile1);
-        user.setId(2);
-        user.setUsername("Prerna");
-        user.setPassword("password1@@");
+        user1.setProfile(userProfile1);
+        user1.setId(2);
+        user1.setUsername("Prerna");
+        user1.setPassword("password1@@");
 
         Image image = new Image();
         image.setId(1);
@@ -310,4 +310,3 @@ public class ImageControllerTest {
     }
 }
 
-*/

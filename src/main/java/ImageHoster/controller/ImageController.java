@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
@@ -47,8 +49,7 @@ public class ImageController {
     //this list is then sent to 'images/image.html' file and the tags are displayed
     @RequestMapping("/images/{imageId}/{title}")
     public String showImage(@PathVariable("imageId") Integer imageId, @PathVariable("title") String title, Model model) {
-        Image image = imageService.getImageByIdAndTitle(imageId,title); //Title(title);
-//        Image image1 = imageService.getImageByTitle(title);
+        Image image = imageService.getImageByIdAndTitle(imageId,title);
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
         return "images/image";
@@ -93,13 +94,21 @@ public class ImageController {
     //The method first needs to convert the list of all the tags to a string containing all the tags separated by a comma and then add this string in a Model type object
     //This string is then displayed by 'edit.html' file as previous tags of an image
     @RequestMapping(value = "/editImage")
-    public String editImage(@RequestParam("imageId") Integer imageId, Model model) {
+    public String editImage(@RequestParam("imageId") Integer imageId, Model model, HttpSession session) {
         Image image = imageService.getImage(imageId);
+        User user = (User) session.getAttribute("loggeduser");
+        String error = null;
+        if(image.getUser().getId() != user.getId()) {
+            error = "Only the owner of the image can edit the image";
+            model.addAttribute("editError", error);
+            model.addAttribute("tags", image.getTags());
+        }else{
+            String tags = convertTagsToString(image.getTags());
+            model.addAttribute("tags", tags);
+        }
 
-        String tags = convertTagsToString(image.getTags());
         model.addAttribute("image", image);
-        model.addAttribute("tags", tags);
-        return "images/edit";
+        return (error != null)?"images/image":"images/edit";
     }
 
     //This controller method is called when the request pattern is of type 'images/edit' and also the incoming request is of PUT type
@@ -140,10 +149,38 @@ public class ImageController {
     //This controller method is called when the request pattern is of type 'deleteImage' and also the incoming request is of DELETE type
     //The method calls the deleteImage() method in the business logic passing the id of the image to be deleted
     //Looks for a controller method with request mapping of type '/images'
-    @RequestMapping(value = "/deleteImage", method = RequestMethod.DELETE)
-    public String deleteImageSubmit(@RequestParam(name = "imageId") Integer imageId) {
-        imageService.deleteImage(imageId);
-        return "redirect:/images";
+    @RequestMapping(value = "/deleteImage", method = {RequestMethod.DELETE,RequestMethod.POST})
+    public String deleteImageSubmit(
+            @RequestParam(name = "imageId") Integer imageId,
+            HttpSession session, //, RedirectAttributes redirectAttributes,
+            Model model
+    ) {
+//        Image image = imageService.getImage(imageId);
+//        User user = (User) session.getAttribute("loggeduser");
+//        if(image.getUser().getId() != user.getId()) {
+//            String error = "Only the owner of the image can edit the image";
+//            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//            redirectAttributes.addFlashAttribute("deleteError", error);
+//            return "redirect:images/"+imageId+"/"+image.getTitle();
+//        }
+//
+//        imageService.deleteImage(imageId);
+//        return "redirect:/images";
+
+        Image image = imageService.getImage(imageId);
+        User user = (User) session.getAttribute("loggeduser");
+        String error = null;
+        if(image.getUser().getId() != user.getId()) {
+            error = "Only the owner of the image can delete the image";
+            model.addAttribute("deleteError", error);
+            model.addAttribute("tags", image.getTags());
+        }else{
+            imageService.deleteImage(imageId);
+        }
+
+        model.addAttribute("image", image);
+        return (error != null) ? "images/image" : "redirect:/images" ;
+//        return (error != null) ? "":"redirect:/images";
     }
 
 
